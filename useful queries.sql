@@ -14,9 +14,9 @@ JOIN r_track_artist ON tracks.id = r_track_artist.track_id
 JOIN artists ON r_track_artist.artist_id = artists.id
 JOIN audio_features ON audio_features.id = tracks.audio_feature_id
 
--- alternative without the junk (still slow)
+-- alternative with only desired columns
 SELECT 
-    artists.name, tracks.name, 
+    tracks.id, artists.name, tracks.name, 
     acousticness, danceability, duration, energy, instrumentalness, key, 
     liveness, loudness, mode, speechiness, tempo, time_signature, valence 
     FROM tracks
