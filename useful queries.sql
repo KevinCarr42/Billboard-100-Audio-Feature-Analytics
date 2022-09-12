@@ -15,6 +15,8 @@ JOIN artists ON r_track_artist.artist_id = artists.id
 JOIN audio_features ON audio_features.id = tracks.audio_feature_id
 
 -- alternative with only desired columns
+
+-- MAY NEED DISTINCT (i think it's just multiple artists on single songs)
 SELECT 
     tracks.id, artists.name, tracks.name, 
     acousticness, danceability, duration, energy, instrumentalness, key, 
