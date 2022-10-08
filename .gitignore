@@ -6,3 +6,5 @@ every_song_with_data.csv
 references/ALL REFERENCES SEARCHABLE.pdf
 references/_ALL REFERENCES SEARCHABLE.pdf
 df_10M.parquet
+release_dates_from_sql.csv
+df_B100_songs_TEMP.parquet
