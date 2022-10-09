@@ -28,3 +28,22 @@ JOIN audio_features ON audio_features.id = tracks.audio_feature_id
 SELECT id, release_date FROM tracks
 JOIN r_albums_tracks ON tracks.id = r_albums_tracks.id
 JOIN albums ON r_albums_tracks.album_id = albums.id
+
+
+
+-- how often are genres used to describe bands?
+SELECT *, COUNT(genre_id) as counts FROM r_artist_genre
+GROUP BY genre_id
+ORDER BY counts DESC
+
+
+-- only return most commonly used genre
+SELECT artists.id AS artist_id, name AS artist, genre_id AS genre, counts FROM artists 
+JOIN r_artist_genre ON artists.id = r_artist_genre.artist_id
+    JOIN
+    (SELECT genre_id, COUNT(genre_id) AS counts FROM r_artist_genre
+    GROUP BY genre_id
+    ORDER BY counts DESC) AS genre_counts
+ON r_artist_genre.genre_id = genre_counts.genre_id
+GROUP BY artist_id
+ORDER BY name
