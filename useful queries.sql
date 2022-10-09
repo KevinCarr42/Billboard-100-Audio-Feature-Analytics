@@ -32,7 +32,7 @@ JOIN albums ON r_albums_tracks.album_id = albums.id
 
 
 -- how often are genres used to describe bands?
-SELECT *, COUNT(genre_id) as counts FROM r_artist_genre
+SELECT genre_id, COUNT(genre_id) as counts FROM r_artist_genre
 GROUP BY genre_id
 ORDER BY counts DESC
 
