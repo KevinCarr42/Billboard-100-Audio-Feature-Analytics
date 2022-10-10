@@ -47,3 +47,6 @@ JOIN r_artist_genre ON artists.id = r_artist_genre.artist_id
 ON r_artist_genre.genre_id = genre_counts.genre_id
 GROUP BY artist_id
 ORDER BY name
+
+-- artist track cross table
+SELECT * FROM r_track_artist
