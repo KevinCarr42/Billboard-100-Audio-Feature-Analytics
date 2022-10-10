@@ -24,11 +24,11 @@ JOIN r_track_artist ON tracks.id = r_track_artist.track_id
 JOIN artists ON r_track_artist.artist_id = artists.id
 JOIN audio_features ON audio_features.id = tracks.audio_feature_id
 
---  release dates
-SELECT id, release_date FROM tracks
-JOIN r_albums_tracks ON tracks.id = r_albums_tracks.id
-JOIN albums ON r_albums_tracks.album_id = albums.id
 
+--  release dates
+SELECT tracks.id AS track_id, release_date FROM tracks
+JOIN r_albums_tracks ON tracks.id = r_albums_tracks.track_id
+JOIN albums ON r_albums_tracks.album_id = albums.id
 
 
 -- how often are genres used to describe bands?
@@ -47,6 +47,7 @@ JOIN r_artist_genre ON artists.id = r_artist_genre.artist_id
 ON r_artist_genre.genre_id = genre_counts.genre_id
 GROUP BY artist_id
 ORDER BY name
+
 
 -- artist track cross table
 SELECT * FROM r_track_artist
