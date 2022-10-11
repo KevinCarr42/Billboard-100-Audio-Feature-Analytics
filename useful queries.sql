@@ -31,23 +31,31 @@ JOIN r_albums_tracks ON tracks.id = r_albums_tracks.track_id
 JOIN albums ON r_albums_tracks.album_id = albums.id
 
 
--- how often are genres used to describe bands?
-SELECT genre_id, COUNT(genre_id) as counts FROM r_artist_genre
-GROUP BY genre_id
-ORDER BY counts DESC
+-- OUTDATED: this is just by artist, just based on linking table
+-- better results from merging artist with song
+
+	-- how often are genres used to describe bands?
+	SELECT genre_id, COUNT(genre_id) as counts FROM r_artist_genre
+	GROUP BY genre_id
+	ORDER BY counts DESC
 
 
--- only return most commonly used genre
-SELECT artists.id AS artist_id, name AS artist, genre_id AS genre, counts FROM artists 
-JOIN r_artist_genre ON artists.id = r_artist_genre.artist_id
-    JOIN
-    (SELECT genre_id, COUNT(genre_id) AS counts FROM r_artist_genre
-    GROUP BY genre_id
-    ORDER BY counts DESC) AS genre_counts
-ON r_artist_genre.genre_id = genre_counts.genre_id
-GROUP BY artist_id
-ORDER BY name
+	-- only return most commonly used genre
+	SELECT artists.id AS artist_id, name AS artist, genre_id AS genre, counts FROM artists 
+	JOIN r_artist_genre ON artists.id = r_artist_genre.artist_id
+		JOIN
+		(SELECT genre_id, COUNT(genre_id) AS counts FROM r_artist_genre
+		GROUP BY genre_id
+		ORDER BY counts DESC) AS genre_counts
+	ON r_artist_genre.genre_id = genre_counts.genre_id
+	GROUP BY artist_id
+	ORDER BY name
 
 
 -- artist track cross table
 SELECT * FROM r_track_artist
+
+
+
+
+

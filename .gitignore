@@ -9,3 +9,4 @@ df_10M.parquet
 release_dates_from_sql.csv
 df_B100_songs_TEMP.parquet
 sql_artist_id_by_track.csv
+track_genre_sql.csv
