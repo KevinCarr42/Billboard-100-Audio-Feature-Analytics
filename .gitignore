@@ -15,3 +15,4 @@ df_B100_songs_STEP2COMPLETE.parquet
 df_10M_STEP3COMPLETE.parquet
 df_10M_STEP2COMPLETE.parquet
 df_track_genres.parquet
+df_10M_RELEASEDATE.parquet
