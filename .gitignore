@@ -17,3 +17,4 @@ df_10M_STEP2COMPLETE.parquet
 df_track_genres.parquet
 df_10M_RELEASEDATE.parquet
 df_10M_STEP1COMPLETE.parquet
+popularity_by_track_sql.csv

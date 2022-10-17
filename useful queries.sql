@@ -56,6 +56,17 @@ JOIN albums ON r_albums_tracks.album_id = albums.id
 SELECT * FROM r_track_artist
 
 
+-- track genres from SQL
+SELECT tracks.id AS track_id, name AS track_name, r_track_artist.artist_id AS artist_id, genre_id  FROM tracks
+JOIN r_track_artist ON tracks.id = r_track_artist.track_id
+JOIN r_artist_genre ON r_track_artist.artist_id = r_artist_genre.artist_id
 
 
+-- popularity by track and genre
+SELECT tracks.id, r_artist_genre.genre_id, tracks.popularity FROM tracks
+JOIN r_track_artist ON tracks.id = r_track_artist.track_id
+JOIN r_artist_genre ON r_track_artist.artist_id = r_artist_genre.artist_id
 
+
+-- popularity by track
+SELECT id, popularity FROM tracks
