@@ -18,3 +18,4 @@ df_track_genres.parquet
 df_10M_RELEASEDATE.parquet
 df_10M_STEP1COMPLETE.parquet
 popularity_by_track_sql.csv
+intermediary_calcs/
