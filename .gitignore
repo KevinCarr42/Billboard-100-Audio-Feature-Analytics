@@ -21,3 +21,5 @@ popularity_by_track_sql.csv
 intermediary_calcs/
 *.tmp
 SQL_track_release_date_and_genre.csv
+df_1M_songs.pickle
+df_SQL.pickle
