@@ -20,3 +20,4 @@ df_10M_STEP1COMPLETE.parquet
 popularity_by_track_sql.csv
 intermediary_calcs/
 *.tmp
+SQL_track_release_date_and_genre.csv

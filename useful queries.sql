@@ -70,3 +70,11 @@ JOIN r_artist_genre ON r_track_artist.artist_id = r_artist_genre.artist_id
 
 -- popularity by track
 SELECT id, popularity FROM tracks
+
+
+--  release dates and genres
+SELECT tracks.id AS id, release_date, genre_id as genre FROM tracks
+JOIN r_albums_tracks ON tracks.id = r_albums_tracks.track_id
+JOIN albums ON r_albums_tracks.album_id = albums.id
+JOIN r_track_artist ON tracks.id = r_track_artist.track_id
+JOIN r_artist_genre ON r_track_artist.artist_id = r_artist_genre.artist_id
