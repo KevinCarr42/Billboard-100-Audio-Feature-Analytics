@@ -24,3 +24,4 @@ SQL_track_release_date_and_genre.csv
 df_1M_songs.pickle
 df_SQL.pickle
 _BACKUP/
+df_10M_DUPES.pickle
