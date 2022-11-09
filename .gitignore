@@ -35,5 +35,5 @@ df_10M_clustered.pickle
 df_genre.pickle
 df_id_from_API.pickle
 __pycache__/
-.ipynb_checkpoints
+.ipynb_checkpoints/
 .cache
