@@ -32,3 +32,8 @@ X_not.pickle
 X_clustered.pickle
 X.pickle
 df_10M_clustered.pickle
+df_genre.pickle
+df_id_from_API.pickle
+__pycache__
+.ipynb_checkpoints
+.cache
