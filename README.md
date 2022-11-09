@@ -15,7 +15,7 @@ https://developer.spotify.com/documentation/web-api/reference/#/
 ### Link to larger files used in this project:
 https://drive.google.com/drive/folders/10wpORzZURV11VAUPKmCDDKxHFCvwjloR
 
-Note: must use be a member of Toronto Metropolitan University group account to access this folder
+Note: You must use be a member of the Toronto Metropolitan University group account to access this folder
 
 ### Repository Outline
 
