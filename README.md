@@ -39,32 +39,33 @@ This project will follow these tentative stages:
 2. Combine data from different sources sources
 3. Gather missing data from Spotify API
 4. Exploratory data analysis
-  * investigate histograms for features
-  * investigate time series changes to features
-  * investigate correlation between features
-  * investigation genres
+   * investigate histograms for features
+   * investigate time series changes to features
+   * investigate correlation between features
+   * investigation genres
 5. Remove outliers before clustering:
-  * investigate IQR, Z score, percentiles, and domain knowledge
-  * combine percentiles and domain knowledge to remove tracks that are not music (or a reasonable estimate)
+   * investigate IQR, Z score, percentiles, and domain knowledge
+   * combine percentiles and domain knowledge to remove tracks that are not music (or a reasonable estimate)
 6. Cluster data using audio features
-  * optimise clusters using silhouette and elbow methods
-  * compare clusters to genres from EDA, and create another clustering with the same number of features
+   * optimise clusters using silhouette and elbow methods
+   * compare clusters to genres from EDA, and create another clustering with the same number of features
 7. Classify songs based on predicted popularity
-  * set up a modelling pipeline that includes undersampling to balance the dataset for classification
-  * investigate a number of machine learning models
-    * logistic regression
-    * decision trees
-    * k nearest neighbours
-    * random forests
-    * boosted classifiers (adaboost)
-    * neural networks (TensorFlow)
-  * test all methods using default settings on a number of clusters
-  * choose the best performing model to tune hyperparameters and optimise
-    * THIS STEP FAILED, NO CLASSIFIER WORKS PARTICULARLY WELL (see discussion below)
+   * set up a modelling pipeline that includes undersampling to balance the dataset for classification
+   * investigate a number of machine learning models
+     * logistic regression
+     * decision trees
+     * k nearest neighbours
+     * random forests
+     * boosted classifiers (adaboost)
+     * neural networks (TensorFlow)
+   * test all methods using default settings on a number of clusters
+   * choose the best performing model to tune hyperparameters and optimise
+     * THIS STEP FAILED, NO CLASSIFIER WORKS PARTICULARLY WELL (see discussion below)
 8. Tune hyperparameters to optimise the chosen classifier
-  * since the previous step hasn't worked, each model was tuned to check for optimal settings
-    * THIS STEP DIDN'T WORK EITHER, NO HYPERPARAMETERS IMPROVED CLASSIFICATION UNDER ANY EVALUATION METRIC
+   * since the previous step hasn't worked, every model was tuned to check for optimal settings
+     * THIS STEP DIDN'T WORK EITHER, NO HYPERPARAMETERS IMPROVED CLASSIFICATION UNDER ANY EVALUATION METRIC
 9. OPTIONAL: Use a voting classifier to ensemble the best performing methods from before
+10. Conclusion and reporting
   
 ### Discussion About Failed Classification
 The balanced classification models are working better than the unbalanced defaults, which predict 100% of songs are not popular (accurate, but 0 recall). So the models are technically performing better than chance. However, predicting on the order of 30% of songs as popular leads to near 0 precision. It looks like there is too much variance in each of the audio features to predict popularity with any precision, even after clustering or grouping by genre. It should be noted that none of the references that predicted popularity dealt with a highly unbabalanced datasets, which is a large part of the issue here.
