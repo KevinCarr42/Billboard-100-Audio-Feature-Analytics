@@ -63,10 +63,10 @@ This project will follow these tentative stages:
       * neural networks (TensorFlow)
     * 5A. test all methods using default settings on a number of clusters
       * choose the best performing model to tune hyperparameters and optimise
-      * THIS STEP FAILED, NO CLASSIFIER WORKS PARTICULARLY WELL (see discussion below)
+      * THIS STEP DID NOT WORK AS DESIRED (see discussion below)
     * 5B. tune hyperparameters to optimise the chosen classifier
       * since the previous step hasn't worked, every model was tuned to check for optimal settings
-      * THIS STEP DIDN'T WORK EITHER, NO HYPERPARAMETERS IMPROVED CLASSIFICATION UNDER ANY EVALUATION METRIC
+      * THIS STEP DIDN'T WORK EITHER (see discussion below)
     * 5C. investigate whether neural networks could solve the above problems
       * THIS STEP DIDN'T WORK EITHER
     * 5D. investigate whether Spotify's popularity metric is more predictable or consistent
