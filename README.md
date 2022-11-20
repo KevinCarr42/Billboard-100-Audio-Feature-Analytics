@@ -61,19 +61,19 @@ This project will follow these tentative stages:
       * random forests
       * boosted classifiers (adaboost)
       * neural networks (TensorFlow)
-  5A. test all methods using default settings on a number of clusters
-  * choose the best performing model to tune hyperparameters and optimise
-    * THIS STEP FAILED, NO CLASSIFIER WORKS PARTICULARLY WELL (see discussion below)
-  5B. tune hyperparameters to optimise the chosen classifier
-    * since the previous step hasn't worked, every model was tuned to check for optimal settings
+    * 5A. test all methods using default settings on a number of clusters
+      * choose the best performing model to tune hyperparameters and optimise
+      * THIS STEP FAILED, NO CLASSIFIER WORKS PARTICULARLY WELL (see discussion below)
+    * 5B. tune hyperparameters to optimise the chosen classifier
+      * since the previous step hasn't worked, every model was tuned to check for optimal settings
       * THIS STEP DIDN'T WORK EITHER, NO HYPERPARAMETERS IMPROVED CLASSIFICATION UNDER ANY EVALUATION METRIC
-  5C. investigate whether neural networks could solve the above problems
-    * THIS STEP DIDN'T WORK EITHER
-  5D. investigate whether Spotify's popularity metric is more predictable or consistent
-    * THIS STEP DIDN'T WORK EITHER
-  5E. OPTIONAL: use a voting classifier to ensemble the best performing methods from before
-  5F. OPTIONAL: use PCA to reduce dimensionality prior to classifying
-    * NOTE: based on results from Step 6, this may increase accuracy of classification
+    * 5C. investigate whether neural networks could solve the above problems
+      * THIS STEP DIDN'T WORK EITHER
+    * 5D. investigate whether Spotify's popularity metric is more predictable or consistent
+      * THIS STEP DIDN'T WORK EITHER
+    * 5E. OPTIONAL: use a voting classifier to ensemble the best performing methods from before
+    * 5F. OPTIONAL: use PCA to reduce dimensionality prior to classifying
+      * NOTE: based on results from Step 6, this may increase accuracy of classification
       * if time permits, it would be interesting to investigate adding PCA to the modelling pipeline
 6. Conclusion and reporting
     * statistics
