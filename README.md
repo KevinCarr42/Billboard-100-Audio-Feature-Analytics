@@ -7,10 +7,10 @@ The central problem in this project is to utilise publicly available audio featu
 For this project, two main techniques will be employed, namely data mining and predictive analytics. First, data mining and knowledge discovery will be used to explore the data, cluster audio features, and determine correlations between audio features. Second, predictive analytics will be used to attempt to build a predictive model using the data. By utilising knowledge discovered during the data mining phase of the project, predictive analysis will be broken into sets clustered with similar audio features. It is anticipated that this segmentation will improve predictive accuracy and lead to further insights.
 
 ### Links to Source Files and Spotify API:
-https://www.kaggle.com/datasets/maltegrosse/8-m-spotify-tracks-genre-audio-features
-https://www.kaggle.com/datasets/rodolfofigueroa/spotify-12m-songs
-https://www.kaggle.com/datasets/dhruvildave/billboard-the-hot-100-songs
-https://developer.spotify.com/documentation/web-api/reference/#/
+https://www.kaggle.com/datasets/maltegrosse/8-m-spotify-tracks-genre-audio-features  
+https://www.kaggle.com/datasets/rodolfofigueroa/spotify-12m-songs  
+https://www.kaggle.com/datasets/dhruvildave/billboard-the-hot-100-songs  
+https://developer.spotify.com/documentation/web-api/reference/#/  
 
 ### Repository Outline
 
@@ -29,8 +29,8 @@ This repository contains the following:
 * A folder containing relevant references
 * A folder containing a compilation of uploaded reports
 
-A number of the datasets used in the calculations are quite large. The following is a link to larger files used in this project:
-https://drive.google.com/drive/folders/10wpORzZURV11VAUPKmCDDKxHFCvwjloR
+A number of the datasets used in the calculations are quite large. The following is a link to larger files used in this project:  
+https://drive.google.com/drive/folders/10wpORzZURV11VAUPKmCDDKxHFCvwjloR  
 Note: You must use be a member of the Toronto Metropolitan University group account to access this folder.
 
 ### Tentative Stages of This Project
