@@ -1,6 +1,6 @@
 # Comparing Song Audio Features to Rankings on The Billboard Hot 100
 
-![image](https://user-images.githubusercontent.com/94803263/219618495-c5fe3432-2599-4b33-86f0-cd4678f4f31b.png)
+![image](https://user-images.githubusercontent.com/94803263/219633604-40494c9c-d64e-4802-9ee1-56b029f47b7e.png)
 
 ### Project Description
 
