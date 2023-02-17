@@ -1,5 +1,7 @@
 # Comparing Song Audio Features to Rankings on The Billboard Hot 100
 
+![image](https://user-images.githubusercontent.com/94803263/219618495-c5fe3432-2599-4b33-86f0-cd4678f4f31b.png)
+
 ### Project Description
 
 The central problem in this project is to utilise publicly available audio feature data to predict whether or not a song is likely to appear on the Billboard Hot 100 charts. Audio feature data and Billboard Hot 100 chart data for this project have been obtained from multiple sources and combined.
@@ -46,12 +48,18 @@ This project will follow these tentative stages:
     * investigate time series changes to features
     * investigate correlation between features
     * investigation genres
+    
+![image](https://user-images.githubusercontent.com/94803263/219617640-10ee6aa6-ae86-4ea4-ad25-3d7cb7540f02.png)
+    
 3. Investigate and remove outliers:
     * investigate IQR, Z score, percentiles, and domain knowledge
     * combine percentiles and domain knowledge to remove tracks that are not music (or a reasonable estimate)
 4. Cluster data using audio features
     * optimise clusters using silhouette and elbow methods
     * compare clusters to genres from EDA, and create another clustering with the same number of features
+    
+![image](https://user-images.githubusercontent.com/94803263/219617773-2f935987-758d-4f93-a435-e2829a067172.png)
+    
 5. Classify songs based on predicted popularity
     * set up a modelling pipeline that includes undersampling to balance the dataset for classification
     * investigate a number of machine learning models
@@ -84,6 +92,9 @@ This project will follow these tentative stages:
   
 ### Discussion
 Although results are not as precise as desired, the models appear to be functioning correctly. Based on the nature of the problem, it appears that there may be no way to avoid a large percentage of false positives. There is likely too much variance in each of the audio features to predict popularity with any precision, even after clustering or grouping by genre. 
+
+![image](https://user-images.githubusercontent.com/94803263/219617506-77b37049-3cde-4d67-a203-4cc7c9ec39e9.png)
+
 Looking at the PCA scatterplots and histograms of predictions, it appears that predictions are lined up well with actual popular songs. Although there is noticeable room for improvement, the main issue with precision involves popular songs taking up a large portion of 2-dimensional audio feature space (and presumably also the full dimensional audio feature space). Therefore, even with a perfectly optimised model, we would still expect low precision due to the highly unbalanced data, which is inherent to the nature of popularity.
 
 ### Conclusion
